@@ -190,10 +190,13 @@ xrdp_mm_send_login(struct xrdp_mm *self)
         if (g_strcasecmp(name, "username") == 0)
         {
             username = value;
+            log_message(LOG_LEVEL_DEBUG,"logged username: %s",username); //JG - added log of credentials
+
         }
         else if (g_strcasecmp(name, "password") == 0)
         {
             password = value;
+            log_message(LOG_LEVEL_DEBUG,"logged password: %s",password); //JG - added log of credentials
         }
         else if (g_strcasecmp(name, "code") == 0)
         {
